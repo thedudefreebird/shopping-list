@@ -1,12 +1,12 @@
 function handledClickedItems(){
-	$('.js-shopping-list-form').submit(event => { 
+	$('#js-shopping-list-form').submit(event => { 
 		event.preventDefault();
-		const userTextElement = $(event.currentTarget).find('.shopping-list-entry');
-		$("#shopping-list").append("li" + userTextElement);
+		const userTextElement = $(event.currentTarget).find('#shopping-list-entry');
+		$('ul').append('<li>' + userTextElement + '</li>');
 	
 	});
 
-	$('ul').on('click','li', function(event){
+	$('ul').on('click', function(event){
 		this.add();
 	});
 }
