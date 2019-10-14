@@ -6,7 +6,7 @@ function handledClickedItems(){
 	
 	});
 
-	$('ul').on('li', function(event){
+	$('ul').on('click','li', function(event){
 		this.add();
 	});
 }
