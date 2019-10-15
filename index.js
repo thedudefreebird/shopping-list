@@ -1,14 +1,25 @@
 function handledClickedItems(){
-	$('#js-shopping-list-form').submit(event => { 
+	$('#js-shopping-list-form').submit(event => {
 		event.preventDefault();
 		const userTextElement = $(event.currentTarget).find('#shopping-list-entry');
-		$('ul').append('<li>' + userTextElement + '</li>');
-	
+		$('.shopping-list').append(
+		`<li>
+        <span class="shopping-item"> + userTextElement + </span>
+        <div class="shopping-item-controls">
+          <button class="shopping-item-toggle">
+            <span class="button-label">check</span>
+          </button>
+          <button class="shopping-item-delete">
+            <span class="button-label">delete</span>
+          </button>
+        </div>
+      	</li>`);
+
 	});
 
-	$('ul').on('click', function(event){
-		this.add();
-	});
+	//$('ul').on('click', function(event){
+		//this.add();
+	//});
 }
 
 $(handledClickedItems);
