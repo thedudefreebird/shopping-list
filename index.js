@@ -17,21 +17,17 @@ function addedItem(){
 	});
 
 	$('.shopping-item-toggle').on('click', function(event){
-		$('.shopping-item').addClass('shopping-item__checked');
+		event.stopPropagation();
+		let cleckItem = $(this).closest('li').find('.shopping-item');
+		cleckItem.addClass('shopping-item__checked');
 	});
 
 	$('.shopping-item-delete').on('click', function(event){
-		$('.shopping-item').remove();
+		event.stopPropagation();
+		let deleteItem = $(this).closest('li').find('.shopping-item');
+		deleteItem.remove('.shopping-item', '.shopping-item-controls');
 	});
 }
 
 
 $(addedItem);
-
-
-
-
-/*let listChecked = $('.shopping-list');
-listChecked.find('.shopping-item-toggle').on('click', function(event){
-	$('.shopping-item').addClass('.shopping-item__checked');
-});*/
