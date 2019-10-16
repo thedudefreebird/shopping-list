@@ -15,7 +15,23 @@ function addedItem(){
 		</li>
 			`);
 	});
+
+	$('.shopping-item-toggle').on('click', function(event){
+		$('.shopping-item').addClass('shopping-item__checked');
+	});
+
+	$('.shopping-item-delete').on('click', function(event){
+		$('.shopping-item').remove();
+	});
 }
 
 
 $(addedItem);
+
+
+
+
+/*let listChecked = $('.shopping-list');
+listChecked.find('.shopping-item-toggle').on('click', function(event){
+	$('.shopping-item').addClass('.shopping-item__checked');
+});*/
