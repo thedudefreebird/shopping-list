@@ -24,8 +24,8 @@ function addedItem(){
 
 	$('.shopping-item-delete').on('click', function(event){
 		event.stopPropagation();
-		let deleteItem = $(this).closest('li').find('.shopping-item');
-		deleteItem.remove('.shopping-item', '.shopping-item-controls');
+		let deleteItem = $(this).closest('li');
+		deleteItem.remove();
 	});
 }
 
