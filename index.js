@@ -20,14 +20,14 @@ function addedItem(){
 
 
 	//Works on check button click for items that were provided.
-	$('.shopping-item-toggle').on('click', function(event){
+	$('.shopping-list').on('click', '.shopping-item-toggle', function(event){
 		event.stopPropagation();
 		let checkItem = $(this).closest('li').find('.shopping-item');
-		checkItem.addClass('shopping-item__checked');
+		checkItem.toggleClass('shopping-item__checked');
 	});
 
 	//Works on delete button click for items that were provided.
-	$('.shopping-item-delete').on('click', function(event){
+	$('.shopping-list').on('click', '.shopping-item-delete', function(event){
 		event.stopPropagation();
 		let deleteItem = $(this).closest('li');
 		deleteItem.remove();
